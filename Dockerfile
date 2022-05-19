@@ -1,3 +1,3 @@
-From httpd:latest
-ADD index.html /var/www/html/
+From nginx:latest
+ADD index.html /usr/share/nginx/html
 EXPOSE 8181
