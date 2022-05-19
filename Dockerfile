@@ -1,4 +1,4 @@
-From nginx:latest
+FROM nginx:latest
 RUN  touch /var/run/nginx.pid && \
      chown -R nginx:nginx /var/cache/nginx /var/run/nginx.pid
 USER nginx
