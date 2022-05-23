@@ -13,5 +13,6 @@ FROM nginx:latest
 #ADD index.html /var/www/html/
 #WORKDIR /usr/share/nginx/html/
 COPY index.html /usr/share/nginx/html/
-USER 1001
-EXPOSE 8187
+USER root
+EXPOSE 8188
+CMD [ "nginx" -g "-daemon off" ]
