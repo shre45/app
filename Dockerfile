@@ -14,5 +14,5 @@ FROM nginx:latest
 #WORKDIR /usr/share/nginx/html/
 COPY index.html /usr/share/nginx/html/
 USER root
-EXPOSE 8188
+EXPOSE 8189
 CMD ["nginx", "-g", "daemon off;"]
