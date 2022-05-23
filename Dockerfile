@@ -1,4 +1,5 @@
-FROM scratch
+#FROM scratch
+FROM nginx:latest
 #RUN  touch /var/run/nginx.pid && \
 #     chown -R nginx:nginx /var/cache/nginx /var/run/nginx.pid
 #USER nginx
@@ -8,9 +9,9 @@ FROM scratch
 
 #WORKDIR /app
 #ADD . /app
-RUN yum install -y httpd
-ADD index.html /var/www/html/
+#RUN yum install -y httpd
+#ADD index.html /var/www/html/
 #WORKDIR /usr/share/nginx/html/
-#ADD . /usr/share/nginx/html/
+COPY index.html /usr/share/nginx/html/
 USER 1001
-EXPOSE 8186
+EXPOSE 8187
