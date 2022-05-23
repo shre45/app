@@ -15,5 +15,5 @@ RUN chown -R nginx:nginx   /etc/nginx/conf.d/default.conf /usr/share/nginx/html
 #ADD index.html /var/www/html/
 #WORKDIR /usr/share/nginx/html/
 COPY index.html /usr/share/nginx/html/
-EXPOSE 8082
+EXPOSE 8084
 CMD ["nginx", "-g", "daemon off;"]
