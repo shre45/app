@@ -15,4 +15,4 @@ FROM nginx:latest
 COPY index.html /usr/share/nginx/html/
 USER root
 EXPOSE 8188
-CMD [ "nginx" -g "-daemon off" ]
+CMD ["nginx", "-g", "daemon off;"]
