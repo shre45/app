@@ -3,6 +3,14 @@ FROM nginx:latest
 #     chown -R nginx:nginx /var/cache/nginx /var/run/nginx.pid
 #USER nginx
 #RUN chown -R nginx:nginx   /etc/nginx/conf.d/default.conf /usr/share/nginx/html
-ADD index.html /usr/share/nginx/html
+#ADD requirements.txt .
+#RUN python -m pip install -r requirements.txt
+
+#WORKDIR /app
+#ADD . /app
+
+ADD index.html .
+WORKDIR /usr/share/nginx/html/
+ADD . /usr/share/nginx/html/
 USER 1001
-EXPOSE 8184
+EXPOSE 8185
