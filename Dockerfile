@@ -16,6 +16,6 @@ FROM httpd:latest
 #WORKDIR /usr/share/nginx/html/
 COPY index.html /var/www/html/
 EXPOSE 8084
-CMD ["-D", "FOREGROUND"]
-ENTRYPOINT ["/usr/sbin/httpd"]
+#CMD ["-D", "FOREGROUND"]
+#ENTRYPOINT ["/usr/sbin/httpd"]
 #CMD ["nginx", "-g", "daemon off;"]
